@@ -13,6 +13,7 @@ Vehicle::Vehicle()
 		cin.ignore();
 		cin.sync();
 	}
+	setManufacturer(manuNameHold);
 	cout << "Enter the year built: ";
 	while (!(cin >> yearHold) || cin.fail()) {
 		cout << "\nEntry was NAN or invalid, please try again.\nEntry: ";
@@ -20,12 +21,13 @@ Vehicle::Vehicle()
 		cin.ignore();
 		cin.sync();
 	}
+	setYear(yearHold);
 }
 
 Vehicle::Vehicle(string manuName, int yearBuilt)
 {
-	Vehicle::manufacturer = manuName;
-	Vehicle::year = yearBuilt;
+	setManufacturer(manuName);
+	setYear(yearBuilt);
 }
 
 void Vehicle::setManufacturer(string getVehicleManu)
