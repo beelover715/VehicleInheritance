@@ -1,27 +1,11 @@
+// Charles Schneider
+// CIS 1202 N01
+// November 29th, 2024
+
 #include "Vehicle.h"
 
 Vehicle::Vehicle()
 {
-	string manuNameHold;
-	int yearHold;
-
-	cout << "Vehicle:\n";
-	cout << "Enter the manufacturer: ";
-	while (!(getline(cin, manuNameHold)) || cin.fail()) {
-		cout << "\nEntry was invalid, please try again.\nEntry: ";
-		cin.clear();
-		cin.ignore();
-		cin.sync();
-	}
-	setManufacturer(manuNameHold);
-	cout << "Enter the year built: ";
-	while (!(cin >> yearHold) || cin.fail()) {
-		cout << "\nEntry was NAN or invalid, please try again.\nEntry: ";
-		cin.clear();
-		cin.ignore();
-		cin.sync();
-	}
-	setYear(yearHold);
 }
 
 Vehicle::Vehicle(string manuName, int yearBuilt)

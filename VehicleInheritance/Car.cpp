@@ -1,36 +1,11 @@
+// Charles Schneider
+// CIS 1202 N01
+// November 29th, 2024
+
 #include "Car.h"
 
 Car::Car()
 {
-	string manuNameHold;
-	int yearHold;
-	int doorHold;
-
-	cout << "Car:\n";
-	cout << "Enter the manufacturer: ";
-	while (!(getline(cin, manuNameHold)) || cin.fail()) {
-		cout << "\nEntry was invalid, please try again.\nEntry: ";
-		cin.clear();
-		cin.ignore();
-		cin.sync();
-	}
-	setManufacturer(manuNameHold);
-	cout << "Enter the year built: ";
-	while (!(cin >> yearHold) || cin.fail()) {
-		cout << "\nEntry was NAN or invalid, please try again.\nEntry: ";
-		cin.clear();
-		cin.ignore();
-		cin.sync();
-	}
-	setYear(yearHold);
-	cout << "Enter the amount of doors: ";
-	while (!(cin >> doorHold) || cin.fail()) {
-		cout << "\nEntry was NAN or invalid, please try again.\nEntry: ";
-		cin.clear();
-		cin.ignore();
-		cin.sync();
-	}
-	setDoors(doorHold);
 }
 
 Car::Car(int carDoors, string carName, int carYear)
